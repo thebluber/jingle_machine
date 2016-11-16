@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>User Information Page</h1>
+    <ul>
+      <%= for {file_name, index} <- Enum.with_index(files) do %>
+        <li>
+          <a href="/sounds/<%= index %>">
+            <%= file_name %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </body>
+</html>
